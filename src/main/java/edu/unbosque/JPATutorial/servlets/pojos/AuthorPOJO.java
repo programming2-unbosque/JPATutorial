@@ -6,11 +6,14 @@ public class AuthorPOJO {
 
     private String name;
 
+    private Integer numBooks;
+
     public AuthorPOJO() { }
 
-    public AuthorPOJO(Integer authorId, String name) {
+    public AuthorPOJO(Integer authorId, String name, Integer numBooks) {
         this.authorId = authorId;
         this.name = name;
+        this.numBooks = numBooks;
     }
 
     public Integer getAuthorId() {
@@ -27,6 +30,14 @@ public class AuthorPOJO {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Integer getNumBooks() {
+        return numBooks;
+    }
+
+    public void setNumBooks(Integer numBooks) {
+        this.numBooks = numBooks;
     }
 
 }

@@ -38,6 +38,7 @@
             <tr>
                 <th>Id</th>
                 <th>Name</th>
+                <th># Books</th>
                 <th>Actions</th>
             </tr>
             </thead>
@@ -88,7 +89,7 @@
             printTable(elementId = 'librariesTbl', servlet = 'list-libraries', columns = ['libraryId', 'name']);
 
             // Printing authors
-            printTable(elementId = 'authorsTbl', servlet = 'list-authors', columns = ['authorId', 'name'], actions = ['create-book']);
+            printTable(elementId = 'authorsTbl', servlet = 'list-authors', columns = ['authorId', 'name', 'numBooks'], actions = ['create-book']);
 
         </script>
 

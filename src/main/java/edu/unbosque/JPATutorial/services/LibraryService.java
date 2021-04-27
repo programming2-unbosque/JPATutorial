@@ -41,7 +41,7 @@ public class LibraryService {
 
     }
 
-    public Library saveLibrary(String name) {
+    public void saveLibrary(String name) {
 
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("tutorial");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -54,7 +54,7 @@ public class LibraryService {
         entityManager.close();
         entityManagerFactory.close();
 
-        return persistedLibrary;
+        return;
 
     }
 
