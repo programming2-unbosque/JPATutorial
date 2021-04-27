@@ -20,6 +20,8 @@ public class Author {
     @Column(nullable = false)
     private String name;
 
+    // FetchType.EAGER: When we retrieve a Library, we'll also automatically retrieve all of its corresponding Editions
+    // CascadeType.ALL: Propagates all operations from Author to Books
     @OneToMany(mappedBy = "author", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Book> books = new ArrayList<>();
 
