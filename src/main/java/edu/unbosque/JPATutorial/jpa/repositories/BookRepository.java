@@ -11,7 +11,7 @@ public interface BookRepository {
 
     Optional<Book> findByTitle(String title);
 
-    Optional<Book> findByNameNamedQuery(String title);
+    Optional<Book> findByTitleNamedQuery(String title);
 
     List<Book> findAll();
 

@@ -52,8 +52,22 @@ public class AuthorService {
         Author persistedAuthor = authorRepository.save(author).get();
 
         entityManager.close();
+        entityManagerFactory.close();
 
         return persistedAuthor;
+
+    }
+
+    public void deleteAuthor(Integer authorId) {
+
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("tutorial");
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+
+        authorRepository = new AuthorRepositoryImpl(entityManager);
+        authorRepository.deleteById(authorId);
+
+        entityManager.close();
+        entityManagerFactory.close();
 
     }
 

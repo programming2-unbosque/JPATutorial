@@ -1,6 +1,7 @@
 package edu.unbosque.JPATutorial.jpa.repositories;
 
 import edu.unbosque.JPATutorial.jpa.entities.Author;
+import edu.unbosque.JPATutorial.jpa.entities.Library;
 
 import javax.persistence.EntityManager;
 import java.util.List;
@@ -40,6 +41,27 @@ public class AuthorRepositoryImpl implements AuthorRepository {
             e.printStackTrace();
         }
         return Optional.empty();
+    }
+
+    @Override
+    public void deleteById(Integer id) {
+        Author author = entityManager.find(Author.class, id);
+        if (author != null) {
+            try {
+
+                entityManager.getTransaction().begin();
+
+                author.getBooks().forEach(book -> {
+                    entityManager.remove(book);
+                });
+
+                entityManager.remove(author);
+                entityManager.getTransaction().commit();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 }
