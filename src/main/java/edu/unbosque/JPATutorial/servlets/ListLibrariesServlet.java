@@ -4,10 +4,10 @@ import com.google.gson.Gson;
 import edu.unbosque.JPATutorial.services.LibraryService;
 import edu.unbosque.JPATutorial.servlets.pojos.LibraryPOJO;
 
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -21,7 +21,7 @@ public class ListLibrariesServlet extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
 
         LibraryService libraryService = new LibraryService();
-        List<LibraryPOJO> libraries =  libraryService.listLibraries();
+        List<LibraryPOJO> libraries = libraryService.listLibraries();
 
         String librariesJsonString = new Gson().toJson(libraries);
 

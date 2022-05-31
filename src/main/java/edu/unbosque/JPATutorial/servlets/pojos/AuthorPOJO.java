@@ -8,7 +8,8 @@ public class AuthorPOJO {
 
     private Integer numBooks;
 
-    public AuthorPOJO() { }
+    public AuthorPOJO() {
+    }
 
     public AuthorPOJO(Integer authorId, String name, Integer numBooks) {
         this.authorId = authorId;

@@ -6,7 +6,8 @@ public class LibraryPOJO {
 
     private String name;
 
-    public LibraryPOJO() { }
+    public LibraryPOJO() {
+    }
 
     public LibraryPOJO(Integer libraryId, String name) {
         this.libraryId = libraryId;

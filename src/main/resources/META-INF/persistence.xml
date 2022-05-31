@@ -10,9 +10,13 @@
         <class>edu.unbosque.JPATutorial.jpa.entities.Book</class>
         <class>edu.unbosque.JPATutorial.jpa.entities.Edition</class>
         <class>edu.unbosque.JPATutorial.jpa.entities.Library</class>
+
+        <class>edu.unbosque.JPATutorial.jpa.entities.UserApp</class>
+        <class>edu.unbosque.JPATutorial.jpa.entities.WalletHistory</class>
+
         <properties>
-            <property name="hibernate.hbm2ddl.auto" value="update" />
-            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL10Dialect" />
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL10Dialect"/>
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
         </properties>

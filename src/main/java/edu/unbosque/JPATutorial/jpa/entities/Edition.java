@@ -1,6 +1,6 @@
 package edu.unbosque.JPATutorial.jpa.entities;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -29,11 +29,12 @@ public class Edition {
     private Book book;
 
     // FetchType.EAGER: When we retrieve a Library, we'll also automatically retrieve all of its corresponding Editions
-    // CascadeType.PERSIST: When we save a superhero, its movies will also be saved
+    // CascadeType.PERSIST: When we save a edition, its libraries will also be saved
     @ManyToMany(mappedBy = "editions", fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
     private Set<Library> libraries = new HashSet<>();
 
-    public Edition() {}
+    public Edition() {
+    }
 
     public Edition(String description, Date releaseYear) {
         this.description = description;

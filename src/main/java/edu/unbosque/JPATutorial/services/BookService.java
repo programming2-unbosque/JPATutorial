@@ -7,10 +7,10 @@ import edu.unbosque.JPATutorial.jpa.repositories.AuthorRepositoryImpl;
 import edu.unbosque.JPATutorial.jpa.repositories.BookRepository;
 import edu.unbosque.JPATutorial.jpa.repositories.BookRepositoryImpl;
 
-import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+import jakarta.ejb.Stateless;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
 import java.util.Optional;
 
 @Stateless

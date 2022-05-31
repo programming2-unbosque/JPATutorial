@@ -1,6 +1,6 @@
 package edu.unbosque.JPATutorial.jpa.entities;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -26,7 +26,8 @@ public class Library {
     )
     private Set<Edition> editions = new HashSet<>();
 
-    public Library() { }
+    public Library() {
+    }
 
     public Library(Integer libraryId, String name) {
         this.libraryId = libraryId;

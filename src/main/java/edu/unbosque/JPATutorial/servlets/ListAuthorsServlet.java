@@ -4,10 +4,10 @@ import com.google.gson.Gson;
 import edu.unbosque.JPATutorial.services.AuthorService;
 import edu.unbosque.JPATutorial.servlets.pojos.AuthorPOJO;
 
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -21,7 +21,7 @@ public class ListAuthorsServlet extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
 
         AuthorService authorService = new AuthorService();
-        List<AuthorPOJO> authors =  authorService.listAuthors();
+        List<AuthorPOJO> authors = authorService.listAuthors();
 
         String authorsJsonString = new Gson().toJson(authors);
 

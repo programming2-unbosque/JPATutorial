@@ -1,6 +1,6 @@
 package edu.unbosque.JPATutorial.jpa.entities;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "Book") // Optional
@@ -30,7 +30,8 @@ public class Book {
     @OneToOne(mappedBy = "book")
     private Edition edition;
 
-    public Book() {}
+    public Book() {
+    }
 
     public Book(String title, String isbn) {
         this.title = title;
@@ -75,7 +76,9 @@ public class Book {
         this.author = author;
     }
 
-    public Edition getEdition() { return edition; }
+    public Edition getEdition() {
+        return edition;
+    }
 
     public void addEdition(Edition edition) {
         this.edition = edition;

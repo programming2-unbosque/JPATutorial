@@ -1,6 +1,6 @@
 package edu.unbosque.JPATutorial.jpa.entities;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +25,8 @@ public class Author {
     @OneToMany(mappedBy = "author", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Book> books = new ArrayList<>();
 
-    public Author() {}
+    public Author() {
+    }
 
     public Author(String name) {
         this.name = name;

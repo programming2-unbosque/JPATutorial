@@ -2,7 +2,7 @@ package edu.unbosque.JPATutorial.jpa.repositories;
 
 import edu.unbosque.JPATutorial.jpa.entities.Book;
 
-import javax.persistence.EntityManager;
+import jakarta.persistence.EntityManager;
 import java.util.List;
 import java.util.Optional;
 
